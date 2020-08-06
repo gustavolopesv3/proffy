@@ -1,6 +1,6 @@
 import React, { useState, FormEvent} from "react";
 import PageHeader from "../../components/PageHeader";
-
+import {useHistory} from 'react-router-dom';
 import './styles.css';
 import Input from "../../components/input";
 import warningIcon from "../../assets/images/icons/warning.svg"
@@ -12,6 +12,8 @@ import api from "../../services/api";
 
 
 function TeacherForm() {
+
+  const history = useHistory();
 
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState('');
@@ -55,6 +57,7 @@ function TeacherForm() {
       schedule: scheduleItems
     }).then(() => {
       alert('cadastro realizado com sucesso!');
+      history.push('/');
     }).catch(() => {
       alert('Erro no cadatro!');
     })
