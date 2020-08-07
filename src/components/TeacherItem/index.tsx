@@ -1,7 +1,6 @@
 import React from "react";
 import whatsappIcon from "../../assets/images/icons/whatsapp.svg";
 import "./styles.css";
-import { create } from "domain";
 import api from "../../services/api";
 
 
@@ -52,7 +51,7 @@ const TeacherItem: React.FC<TeacherItemPropos> =({ teacher }) => {
           Preço/hora
           <strong>{teacher.cost}</strong>
         </p>
-        <a target='_blank' onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`}>
+        <a onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`}>
           <img src={whatsappIcon} alt="Whatsapp" />
           Entrar em contato
         </a>
