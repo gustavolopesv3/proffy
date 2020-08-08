@@ -130,11 +130,13 @@ function TeacherForm() {
                value={scheduleItem.week_day}
                onChange={ e => setScheduleItemValue(index, 'week_day', e.target.value) }
                options={[
-                 { value: '0', label: 'Segunda-feira'},
-                 { value: '1', label: 'Terça-feira'},
-                 { value: '2', label: 'quarta-feira'},
-                 { value: '3', label: 'quinta-feira'},
-                 { value: '4', label: 'sexta-feira'},
+                 { value: '0', label: 'Domingo'},
+                 { value: '1', label: 'Segunda-feira'},
+                 { value: '2', label: 'Terça-feira'},
+                 { value: '3', label: 'quarta-feira'},
+                 { value: '4', label: 'quinta-feira'},
+                 { value: '5', label: 'sexta-feira'},
+                 { value: '6', label: 'Sabado'},
              ]}
              />
              <Input name='from' value={scheduleItem.from} label='Das' type='time' onChange={e => setScheduleItemValue(index, 'from', e.target.value)}/>
